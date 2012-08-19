@@ -5,6 +5,7 @@
 .coverage
 local_settings.py
 static/
+grappelli
 *.swp
 *.un~
 env
