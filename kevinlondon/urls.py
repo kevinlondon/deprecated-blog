@@ -12,3 +12,4 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^blog/', include('blog.urls')),
 )
+  
