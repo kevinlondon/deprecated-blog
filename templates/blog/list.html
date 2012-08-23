@@ -1,12 +1,4 @@
 {% extends "base.html" %}
-<ul class="breadcrumb">
-    <li>
-        <a href="#">Home</a> <span class="divider">/</span>
-    </li>
-    </li>
-        <a href="active">Blog</a> <span class="divider">/</span>
-    </li>
-</ul>
 
 {% block content %}
 
@@ -16,7 +8,7 @@
 
         <div class="post_meta">
             on {{ post.created }}
-        </div>
+        <a href="active">Blog</a> <span class="divider">/</span>
 
         <div class="post_body">
             {{ post.body|safe|linebreaks }}
@@ -32,3 +24,5 @@
     {% endfor %}
 
 {% endblock %}
+
+</body>
