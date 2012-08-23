@@ -89,7 +89,6 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'blog',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -100,6 +99,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'south',
+    'taggit',
+    'blog',
 )
 
 # A sample logging configuration. The only tangible logging
