@@ -22,9 +22,11 @@ urlpatterns = patterns('blog.views',
     url(r'^$', ListView.as_view(
                  queryset=Post.objects.all().order_by("-created")[:2],
                  template_name="blog/list.html")),
-    url(r'^(?P<pk>\d+)$', DetailView.as_view(
-                 model=Post,
-                 template_name="blog/post.html")),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{1,2})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
+                 view=DetailView.as_view(
+                        model=Post, template_name="blog/post.html"
+                        ),
+                 name='blog_post_detail'),
     url(r'^archive/$', ListView.as_view(
                  queryset=Post.objects.all().order_by("-created"),
                  template_name="blog/archives.html")),
