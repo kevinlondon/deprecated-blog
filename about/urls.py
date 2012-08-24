@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import patterns, url
-from django.views.generic import DetailView
+from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
-    url(r'^$', DetailView.as_view(template_name="about.html"))
+    url(r'^$', TemplateView.as_view(template_name="about.html"))
 )
