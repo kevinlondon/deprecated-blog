@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'south',
     'taggit',
     'blog',
+    'about',
 )
 
 # A sample logging configuration. The only tangible logging
