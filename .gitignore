@@ -4,8 +4,8 @@
 .DS_Store
 .coverage
 local_settings.py
-kevinlondon/static/
-kevinlondon/media/
+static/
+media/
 grappelli
 *.swp
 *.un~
