@@ -14,7 +14,7 @@ LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 
 # Full filesystem path to the project.
-PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -37,7 +37,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.expanduser('~/Dropbox/programming/webdev'),
+    os.path.expanduser('~/Dropbox/programming/webdev/FontAwesome'),
+    os.path.expanduser('~/Dropbox/programming/webdev/twitter-bootstrap'),
 )
 
 # List of finder classes that know how to find static files in
