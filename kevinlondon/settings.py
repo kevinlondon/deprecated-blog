@@ -81,9 +81,13 @@ INSTALLED_APPS = (
     'south',
     'taggit',
     'imagekit',
+    'disqus',
     'blog',
     'about',
 )
+
+DISQUS_API_KEY = 'jTtJ8wb56nB04VTC3bQDYLrw0l8A66oBQdR36T7Oj7aTDmArFnDlRYQDSR8Tcywq'
+DISQUS_WEBSITE_SHORTNAME = 'klondonblog'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
