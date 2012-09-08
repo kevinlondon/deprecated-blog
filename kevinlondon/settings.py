@@ -64,7 +64,7 @@ ROOT_URLCONF = 'kevinlondon.urls'
 WSGI_APPLICATION = 'kevinlondon.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.expanduser("~/Dropbox/programming/django/kevinlondon/templates"),
+    os.path.join(PROJECT_ROOT, "templates"),
 )
 
 INSTALLED_APPS = (
