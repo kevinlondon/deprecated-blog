@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', redirect_to, {'url': '/blog/'}),
     url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^about/', include('about.urls')),
 

@@ -1,6 +1,9 @@
 from django.db import models
-from taggit.managers import TaggableManager
 from django.template.defaultfilters import slugify
+from django import forms
+
+from tinymce.widgets import TinyMCE
+from taggit.managers import TaggableManager
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
@@ -25,3 +28,10 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
+
+class PostAdminForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        widgets = {
+            'body': TinyMCE(attrs={'cols': 80, 'rows':30})
+        }
