@@ -1,7 +1,7 @@
 from django.db import models
-from django.template.defaultfilters import slugify
 from django import forms
 
+from blog.utils import unique_slugify
 from tinymce.widgets import TinyMCE
 from taggit.managers import TaggableManager
 
@@ -21,13 +21,13 @@ class Post(models.Model):
         self.save()
         kwargs = {"slug": self.slug,
                   "year": self.created.year,
-                  "month": str(self.created.month),
                   "day": str(self.created.day),}
         return (url_name, (), kwargs)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Post, self).save(*args, **kwargs)
+        slug_str = "%s" % (self.title)
+        unique_slugify(self, slug_str)
+        super(Post, self).save()
 
 class PostAdminForm(forms.ModelForm):
     class Meta:

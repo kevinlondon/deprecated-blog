@@ -24,7 +24,7 @@ urlpatterns = patterns('blog.views',
                  template_name="blog/list.html",
                  paginate_by = 3,
                  )),
-    url(r'^(?P<year>\d{4})/(?P<month>\d{1,2})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
+    url(r'^(?P<year>\d{4})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
                  view=DetailView.as_view(
                         model=Post, template_name="blog/post.html"
                         ),
